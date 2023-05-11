@@ -1,0 +1,22 @@
+{
+  "name": "UserClickMonitor",
+  "version": "0.1.0",
+  "summary": "A short description of UserClickMonitor.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/khyati71/UserClickMonitor",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "khyati71": "khyati.mirani@zopsmart.com"
+  },
+  "source": {
+    "git": "https://github.com/khyati71/UserClickMonitor.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "UserClickMonitor/Classes/**/*"
+}

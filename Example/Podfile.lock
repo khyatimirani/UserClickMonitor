@@ -1,0 +1,27 @@
+PODS:
+  - Expecta (1.0.6)
+  - Specta (2.0.0)
+  - UserClickMonitor (0.1.0)
+
+DEPENDENCIES:
+  - Expecta
+  - Specta
+  - UserClickMonitor (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Expecta
+    - Specta
+
+EXTERNAL SOURCES:
+  UserClickMonitor:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
+  Specta: b79d84043684b35ffdc2680df578dc318ec2efc2
+  UserClickMonitor: ed6f6d90bfab2906267ff1f3b0c019c01809b33b
+
+PODFILE CHECKSUM: 798c935736b28a077b5aba1c47e7ce0c836aa37a
+
+COCOAPODS: 1.8.4
