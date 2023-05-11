@@ -1,0 +1,14 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'UserClickMonitor_Example' do
+  pod 'UserClickMonitor', :path => '../'
+
+  target 'UserClickMonitor_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+    pod 'Expecta'
+  end
+end
