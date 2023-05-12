@@ -1,0 +1,24 @@
+//
+//  ClickMonitorHelper.h
+//  Pods
+//
+//  Created by Khyati Mirani on 12/05/23.
+//
+
+#ifndef ClickMonitorHelper_h
+#define ClickMonitorHelper_h
+
+@interface ClickMonitor: NSObject
+
+@property (assign, nonatomic) NSString clickTimeStamp;
+
+- (BOOL)addEventToSystem:(NSString)click, (NSString)clickTimeStamp {
+
+}
+
+- (float)getAggregatedAnswer:(int)timeStamp {
+    
+}
+@end
+#endif /* ClickMonitorHelper_h */
+
