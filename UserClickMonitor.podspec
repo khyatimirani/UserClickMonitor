@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'UserClickMonitor/Classes/**/*'
+  s.source_files = 'UserClickMonitor/Source/**/*'
   
   # s.resource_bundles = {
   #   'UserClickMonitor' => ['UserClickMonitor/Assets/*.png']
