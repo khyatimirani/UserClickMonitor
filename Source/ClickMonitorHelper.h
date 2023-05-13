@@ -16,6 +16,10 @@
 
 }
 
+- (NSDate)convertStringToDate:(NSString*)timeString {
+    
+}
+
 - (float)getAggregatedAnswer:(int)timeStamp {
     
 }

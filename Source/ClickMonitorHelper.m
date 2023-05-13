@@ -10,18 +10,33 @@
 
 @implementation ClickMonitor
 
+NSMutableArray *clickTimeStamps;
+
 -(BOOL)addEventToSystem:(NSString*)click {
-    
+    [clickTimeStamps addObject:click];
 }
 
 -(float)getAggregatedAnswer:(int)timeStamp {
-    if (timeStamp == 10) {
-        
-    } else if (timeStamp == 20) {
-        
-    } else {
-        printf("Please enter valid timeStamp to get the aggregated clicks user made");
+    float *counter;
+    NSDate *currentDate = [NSDate date];
+    for (id object in clickTimeStamps) {
+    NSDate *date1 = [self convertStringToDate:object];
+        NSTimeInterval secondsBetween = [currentDate timeIntervalSinceDate:date1];
+        if (secondsBetween <= timeStamp) {
+            counter = counter + 1;
+        }
     }
+    return *counter;
+}
+
+-(NSDate *)convertStringToDate:(NSString*)timeString {
+    NSString *dateStr = timeString;
+
+    // Convert string to date object
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"HH:mm:ss"];
+    NSDate *date = [dateFormat dateFromString:dateStr];
+    return date;
 }
 
 @end

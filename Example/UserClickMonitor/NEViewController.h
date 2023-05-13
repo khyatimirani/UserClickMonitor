@@ -10,4 +10,11 @@
 
 @interface NEViewController : UIViewController
 
+
+
+@property(nonatomic, retain) IBOutlet UIButton *aButton;
+@property(nonatomic, retain) IBOutlet UIButton *tenSecButton;
+@property(nonatomic, retain) IBOutlet UIButton *twentySecButton;
+
+
 @end

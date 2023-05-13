@@ -7,6 +7,8 @@
 //
 
 #import "NEViewController.h"
+@import UserClickMonitor;
+#import <UserClickMonitor/Source/ClickMonitorHelper.h>
 
 @interface NEViewController ()
 
@@ -24,6 +26,19 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)burgerClickAction:(id)sender {
+    printf("Burger clicked");
+    
+}
+
+- (IBAction)tenSecondAction:(id)sender {
+    printf("Burger clicked");
+}
+
+- (IBAction)twentySecondAction:(id)sender {
+    printf("Burger clicked");
 }
 
 @end
