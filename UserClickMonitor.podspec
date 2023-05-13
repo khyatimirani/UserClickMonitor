@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
 
   s.description      = "this pod is helping to monitor users click event"
 
-  s.homepage         = 'https://github.com/khyati71/UserClickMonitor'
+  s.homepage         = 'https://github.com/khyatimirani/UserClickMonitor.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'khyatimirani' => 'khyatimirani1995@gmail.com' }
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'UserClickMonitor/Source/**/*'
+  s.source_files = 'UserClickMonitor/Source/*.{h,m}'
   
   # s.resource_bundles = {
   #   'UserClickMonitor' => ['UserClickMonitor/Assets/*.png']
