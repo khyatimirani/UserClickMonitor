@@ -9,16 +9,18 @@
 #import "ClickMonitorHelper.h"
 
 @implementation ClickMonitorHelper : NSObject
-
-NSMutableArray *clickTimeStamps;
-
--(BOOL)addEventToSystem:(NSString*)click {
-    [clickTimeStamps addObject:click];
+NSMutableArray *clickTimeStamps = nil;
+-(BOOL)addEventToSystem:(NSString*)click :(NSString*)clickTimeStamp {
+    NSArray *array = [[NSArray alloc] initWithObjects:clickTimeStamp,nil];
+    if (clickTimeStamps == nil)  {
+        clickTimeStamps = [[NSMutableArray alloc]  initWithObjects:clickTimeStamp,nil];
+    } else {
+        [clickTimeStamps addObject:array];
+    }
     return true;
 }
-
 -(float)getAggregatedAnswer:(int)timeStamp {
-    float *counter;
+    int *counter = 0;
     NSDate *currentDate = [NSDate date];
     for (id object in clickTimeStamps) {
     NSDate *date1 = [self convertStringToDate:object];
@@ -27,7 +29,8 @@ NSMutableArray *clickTimeStamps;
             counter = counter + 1;
         }
     }
-    return *counter;
+    float a = [[NSNumber numberWithInt: *counter] floatValue];
+    return a;
 }
 
 -(NSDate *)convertStringToDate:(NSString*)timeString {
