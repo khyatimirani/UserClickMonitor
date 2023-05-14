@@ -7,8 +7,6 @@
 //
 
 #import "NEViewController.h"
-@import UserClickMonitor;
-#import <UserClickMonitor/Source/ClickMonitorHelper.h>
 
 @interface NEViewController ()
 

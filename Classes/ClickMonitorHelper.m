@@ -8,12 +8,13 @@
 #import <Foundation/Foundation.h>
 #import "ClickMonitorHelper.h"
 
-@implementation ClickMonitor
+@implementation ClickMonitorHelper : NSObject
 
 NSMutableArray *clickTimeStamps;
 
 -(BOOL)addEventToSystem:(NSString*)click {
     [clickTimeStamps addObject:click];
+    return true;
 }
 
 -(float)getAggregatedAnswer:(int)timeStamp {

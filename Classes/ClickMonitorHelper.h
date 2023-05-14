@@ -8,21 +8,16 @@
 #ifndef ClickMonitorHelper_h
 #define ClickMonitorHelper_h
 
-@interface ClickMonitor: NSObject
+@interface ClickMonitorHelper: NSObject
 
-@property (assign, nonatomic) NSString clickTimeStamp;
+@property (assign, nonatomic) NSString * clickTimeStamp;
 
-- (BOOL)addEventToSystem:(NSString)click, (NSString)clickTimeStamp {
+- (BOOL)addEventToSystem:(NSString*)click :(NSString*)clickTimeStamp;
 
-}
+- (NSDate*)convertStringToDate:(NSString*)timeString;
 
-- (NSDate)convertStringToDate:(NSString*)timeString {
-    
-}
+- (float)getAggregatedAnswer:(int)timeStamp;
 
-- (float)getAggregatedAnswer:(int)timeStamp {
-    
-}
 @end
 #endif /* ClickMonitorHelper_h */
 
