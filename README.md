@@ -22,7 +22,7 @@ pod 'UserClickMonitor'
 
 ## Author
 
-khyati71, khyati.mirani@zopsmart.com
+khyatimirani, khyatimirani1995@gmail.com
 
 ## License
 
