@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -419,7 +419,7 @@
 		6636321B59DD350B08864DCB9E1C23A6 /* UserClickMonitor */ = {
 			isa = PBXGroup;
 			children = (
-				C910FDE92A0D21D20080F22A /* Source */,
+				C962E24D2A0F766E009CDB2D /* Classes */,
 				05B4F4CD6F273026B149A9A7693B937B /* Pod */,
 				731FC3229A3048EBD7D2E7A6515F7337 /* Support Files */,
 			);
@@ -523,13 +523,13 @@
 			path = "Target Support Files/Pods-UserClickMonitor_Tests";
 			sourceTree = "<group>";
 		};
-		C910FDE92A0D21D20080F22A /* Source */ = {
+		C962E24D2A0F766E009CDB2D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				C910FDEC2A0E01340080F22A /* ClickMonitorHelper.h */,
 				C910FDEA2A0D22050080F22A /* ClickMonitorHelper.m */,
 			);
-			path = Source;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		CB01C1BFF40AEACF90D08E0EC01BACB5 /* Expecta */ = {
@@ -843,7 +843,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -1035,7 +1035,11 @@
 				INFOPLIST_FILE = "Target Support Files/Expecta/Expecta-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/Expecta/Expecta.modulemap";
 				PRODUCT_MODULE_NAME = Expecta;
 				PRODUCT_NAME = Expecta;
@@ -1131,7 +1135,11 @@
 				INFOPLIST_FILE = "Target Support Files/Specta/Specta-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/Specta/Specta.modulemap";
 				PRODUCT_MODULE_NAME = Specta;
 				PRODUCT_NAME = Specta;
@@ -1163,7 +1171,11 @@
 				INFOPLIST_FILE = "Target Support Files/UserClickMonitor/UserClickMonitor-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/UserClickMonitor/UserClickMonitor.modulemap";
 				PRODUCT_MODULE_NAME = UserClickMonitor;
 				PRODUCT_NAME = UserClickMonitor;
@@ -1194,7 +1206,11 @@
 				INFOPLIST_FILE = "Target Support Files/Expecta/Expecta-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/Expecta/Expecta.modulemap";
 				PRODUCT_MODULE_NAME = Expecta;
 				PRODUCT_NAME = Expecta;
@@ -1226,7 +1242,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-UserClickMonitor_Example/Pods-UserClickMonitor_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-UserClickMonitor_Example/Pods-UserClickMonitor_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1295,7 +1315,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1319,7 +1340,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-UserClickMonitor_Tests/Pods-UserClickMonitor_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-UserClickMonitor_Tests/Pods-UserClickMonitor_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1354,7 +1379,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-UserClickMonitor_Tests/Pods-UserClickMonitor_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-UserClickMonitor_Tests/Pods-UserClickMonitor_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1388,7 +1417,11 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-UserClickMonitor_Example/Pods-UserClickMonitor_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-UserClickMonitor_Example/Pods-UserClickMonitor_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1423,7 +1456,11 @@
 				INFOPLIST_FILE = "Target Support Files/UserClickMonitor/UserClickMonitor-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/UserClickMonitor/UserClickMonitor.modulemap";
 				PRODUCT_MODULE_NAME = UserClickMonitor;
 				PRODUCT_NAME = UserClickMonitor;
@@ -1455,7 +1492,11 @@
 				INFOPLIST_FILE = "Target Support Files/Specta/Specta-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MODULEMAP_FILE = "Target Support Files/Specta/Specta.modulemap";
 				PRODUCT_MODULE_NAME = Specta;
 				PRODUCT_NAME = Specta;
