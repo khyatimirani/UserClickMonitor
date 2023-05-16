@@ -41,6 +41,10 @@ NSMutableArray *clickTimeStamps = nil;
     } else {
         return  false;
     }
+    
+    -(NSSimpleCString)checkIfCPPAccessible {
+        return  test();
+    }
 }
 
 @end

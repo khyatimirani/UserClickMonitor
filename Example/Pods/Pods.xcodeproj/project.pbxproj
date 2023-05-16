@@ -101,6 +101,8 @@
 		C19122D479984A5E03C3D67959113909 /* UserClickMonitor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FD7A5993E45D1B6C4CB64CF07BB98C25 /* UserClickMonitor-dummy.m */; };
 		C4632B64DD0F3ADB3BB829A6EBC322E6 /* EXPMatcherHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B6E017E52B24B9B668DDE439713662 /* EXPMatcherHelpers.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C86AC684A3B10B92FDDF2340F7A3ADD4 /* SPTCallSite.h in Headers */ = {isa = PBXBuildFile; fileRef = B05CDC1582CABDFE8FDF39B89A31E570 /* SPTCallSite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C901A5562A134CFB00A079AE /* ClickMonitor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C901A5542A134CFB00A079AE /* ClickMonitor.cpp */; };
+		C901A5572A134CFC00A079AE /* ClickMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = C901A5552A134CFB00A079AE /* ClickMonitor.h */; };
 		C910FDEB2A0D22050080F22A /* ClickMonitorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C910FDEA2A0D22050080F22A /* ClickMonitorHelper.m */; };
 		CAEE0E44BC37459BD49C0B1D626B0477 /* EXPMatchers+postNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB4B30D462251D194F3B52D2319D3 /* EXPMatchers+postNotification.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D1319B099BD2394952550D6B0374553A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033A36A29482FD32230FE0CA177F9BD3 /* Foundation.framework */; };
@@ -262,6 +264,8 @@
 		C3778CEB9E52F8A6D925963AFEFE8525 /* SPTExampleGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SPTExampleGroup.m; path = Specta/Specta/SPTExampleGroup.m; sourceTree = "<group>"; };
 		C5A9957F56551A66FCFDC1A5EEFFBC62 /* EXPMatchers+beKindOf.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "EXPMatchers+beKindOf.m"; path = "Expecta/Matchers/EXPMatchers+beKindOf.m"; sourceTree = "<group>"; };
 		C8A7A599EA30319D0F06C8A867B2DDBB /* UserClickMonitor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UserClickMonitor-prefix.pch"; sourceTree = "<group>"; };
+		C901A5542A134CFB00A079AE /* ClickMonitor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ClickMonitor.cpp; sourceTree = "<group>"; };
+		C901A5552A134CFB00A079AE /* ClickMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClickMonitor.h; sourceTree = "<group>"; };
 		C910FDEA2A0D22050080F22A /* ClickMonitorHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClickMonitorHelper.m; sourceTree = "<group>"; };
 		C910FDEC2A0E01340080F22A /* ClickMonitorHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClickMonitorHelper.h; sourceTree = "<group>"; };
 		C990F5FCC2FECD563D8EB042C4ABB408 /* EXPFloatTuple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPFloatTuple.h; path = Expecta/EXPFloatTuple.h; sourceTree = "<group>"; };
@@ -528,6 +532,8 @@
 			children = (
 				C910FDEC2A0E01340080F22A /* ClickMonitorHelper.h */,
 				C910FDEA2A0D22050080F22A /* ClickMonitorHelper.m */,
+				C901A5542A134CFB00A079AE /* ClickMonitor.cpp */,
+				C901A5552A134CFB00A079AE /* ClickMonitor.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -650,6 +656,7 @@
 				521CCD99D4003505D4B65A4131BAFB22 /* EXPDefines.h in Headers */,
 				4CD00C2DDD1130268D57492C92768C2D /* EXPDoubleTuple.h in Headers */,
 				821F025A006CB157497E83C0EC102052 /* Expecta-umbrella.h in Headers */,
+				C901A5572A134CFC00A079AE /* ClickMonitor.h in Headers */,
 				97D9A825385A35B046B1DFF01F24136F /* Expecta.h in Headers */,
 				4D48EA2D9F127FF844FE61016D25DDE0 /* ExpectaObject.h in Headers */,
 				416D3BE841B08CED03D16649957ECB10 /* ExpectaSupport.h in Headers */,
@@ -979,6 +986,7 @@
 				05BCAED08DADF67CC4711A102262D9AB /* EXPMatchers+equal.m in Sources */,
 				15C0054801F96BA3329545B1FAA6A85E /* EXPMatchers+haveCountOf.m in Sources */,
 				B24C0951E730C8D7B6539598555A0126 /* EXPMatchers+match.m in Sources */,
+				C901A5562A134CFB00A079AE /* ClickMonitor.cpp in Sources */,
 				CAEE0E44BC37459BD49C0B1D626B0477 /* EXPMatchers+postNotification.m in Sources */,
 				91F08081D0286CC0733C2D5A9B4A8F32 /* EXPMatchers+raise.m in Sources */,
 				E2058F4A0E7638E420DE96F8DC17AAA9 /* EXPMatchers+raiseWithReason.m in Sources */,
