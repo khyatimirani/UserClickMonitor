@@ -17,6 +17,7 @@
 - (BOOL)addEventToSystem:(NSString *)key :(NSString *)value {
     ClickMonitorCPP cpp;
     cpp.addEventToSystem([key cStringUsingEncoding:NSUTF8StringEncoding], [value cStringUsingEncoding:NSUTF8StringEncoding]);
+    printf("Called from c++ class");
     return true;
 }
 

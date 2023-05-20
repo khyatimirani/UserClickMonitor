@@ -7,7 +7,7 @@
 //
 
 @import UIKit;
-
+@import UserClickMonitor;
 @interface NEViewController : UIViewController
 
 

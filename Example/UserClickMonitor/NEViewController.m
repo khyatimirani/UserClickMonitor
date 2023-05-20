@@ -7,6 +7,7 @@
 //
 
 #import "NEViewController.h"
+@import UserClickMonitor;
 
 @interface NEViewController ()
 
@@ -27,6 +28,8 @@
 }
 
 - (IBAction)burgerClickAction:(id)sender {
+    ClickMonitorCPPWrapper *wrapper = [[ClickMonitorCPPWrapper alloc] init];
+    [wrapper addEventToSystem:@"Key" : @"Click 1"];
     printf("Burger clicked");
     
 }

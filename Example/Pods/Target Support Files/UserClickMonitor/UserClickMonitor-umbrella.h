@@ -14,3 +14,5 @@
 FOUNDATION_EXPORT double UserClickMonitorVersionNumber;
 FOUNDATION_EXPORT const unsigned char UserClickMonitorVersionString[];
 
+#import "ClickMonitorHelper.h"
+#import "ClickMonitorCPPWrapper.h"
