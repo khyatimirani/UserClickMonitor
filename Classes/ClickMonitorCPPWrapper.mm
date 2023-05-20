@@ -16,9 +16,14 @@ ClickMonitorCPP cpp;
     return true;
 }
 
--(float)getAggregatedAnswer:(NSString *)key {
-    cpp.getAggregatedAnswer([key cStringUsingEncoding:NSUTF8StringEncoding]);
-    return  0;
+-(NSMutableArray *)getAggregatedAnswer:(NSString *)key {
+    std::array<float, 3> floatArray = {1.0f, 2.0f, 3.0f};
+    floatArray = cpp.getAggregatedAnswer([key cStringUsingEncoding:NSUTF8StringEncoding]);
+    // Converting std::array to NSArray
+    NSMutableArray *objcArray = [NSMutableArray array];
+    for (int i = 0; i < floatArray.size(); i++) {
+        [objcArray addObject:@(floatArray[i])];
+    }
+    return  objcArray;
 }
-
 @end

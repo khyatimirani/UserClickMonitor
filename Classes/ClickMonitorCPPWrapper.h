@@ -8,6 +8,6 @@
 #import <Foundation/Foundation.h>
 @interface ClickMonitorCPPWrapper : NSObject
 - (BOOL)addEventToSystem:(NSString *)key :(NSString *)value;
-- (float)getAggregatedAnswer:(NSString *)key;
+- (NSMutableArray *)getAggregatedAnswer:(NSString *)key;
 @end
 

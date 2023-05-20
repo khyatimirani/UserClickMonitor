@@ -103,10 +103,8 @@
 		C86AC684A3B10B92FDDF2340F7A3ADD4 /* SPTCallSite.h in Headers */ = {isa = PBXBuildFile; fileRef = B05CDC1582CABDFE8FDF39B89A31E570 /* SPTCallSite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C93B44102A15FAE300B481E0 /* ClickMonitorCPPWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = C93B440F2A15FAE300B481E0 /* ClickMonitorCPPWrapper.mm */; };
 		C93B44122A15FB0900B481E0 /* ClickMonitorCPPWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = C93B44112A15FB0900B481E0 /* ClickMonitorCPPWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C959ABE12A15CACF0003B113 /* ClickMonitorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C910FDEA2A0D22050080F22A /* ClickMonitorHelper.m */; };
 		C959ABE22A15CAD30003B113 /* ClickMonitorCPP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C901A5542A134CFB00A079AE /* ClickMonitorCPP.cpp */; };
 		C959ABE32A15CAD80003B113 /* ClickMonitorCPP.hpp in Headers */ = {isa = PBXBuildFile; fileRef = C901A5552A134CFB00A079AE /* ClickMonitorCPP.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
-		C959ABE42A15CADF0003B113 /* ClickMonitorHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = C910FDEC2A0E01340080F22A /* ClickMonitorHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CAEE0E44BC37459BD49C0B1D626B0477 /* EXPMatchers+postNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3FB4B30D462251D194F3B52D2319D3 /* EXPMatchers+postNotification.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		D1319B099BD2394952550D6B0374553A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033A36A29482FD32230FE0CA177F9BD3 /* Foundation.framework */; };
 		D327EEB8522F6389513EB84ACF12F242 /* EXPMatchers+endWith.m in Sources */ = {isa = PBXBuildFile; fileRef = C01083D7301982932506580694556E8B /* EXPMatchers+endWith.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -269,8 +267,6 @@
 		C8A7A599EA30319D0F06C8A867B2DDBB /* UserClickMonitor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UserClickMonitor-prefix.pch"; sourceTree = "<group>"; };
 		C901A5542A134CFB00A079AE /* ClickMonitorCPP.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ClickMonitorCPP.cpp; sourceTree = "<group>"; };
 		C901A5552A134CFB00A079AE /* ClickMonitorCPP.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ClickMonitorCPP.hpp; sourceTree = "<group>"; };
-		C910FDEA2A0D22050080F22A /* ClickMonitorHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClickMonitorHelper.m; sourceTree = "<group>"; };
-		C910FDEC2A0E01340080F22A /* ClickMonitorHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClickMonitorHelper.h; sourceTree = "<group>"; };
 		C93B440F2A15FAE300B481E0 /* ClickMonitorCPPWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ClickMonitorCPPWrapper.mm; sourceTree = "<group>"; };
 		C93B44112A15FB0900B481E0 /* ClickMonitorCPPWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClickMonitorCPPWrapper.h; sourceTree = "<group>"; };
 		C990F5FCC2FECD563D8EB042C4ABB408 /* EXPFloatTuple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = EXPFloatTuple.h; path = Expecta/EXPFloatTuple.h; sourceTree = "<group>"; };
@@ -535,8 +531,6 @@
 		C962E24D2A0F766E009CDB2D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C910FDEC2A0E01340080F22A /* ClickMonitorHelper.h */,
-				C910FDEA2A0D22050080F22A /* ClickMonitorHelper.m */,
 				C901A5552A134CFB00A079AE /* ClickMonitorCPP.hpp */,
 				C901A5542A134CFB00A079AE /* ClickMonitorCPP.cpp */,
 				C93B440F2A15FAE300B481E0 /* ClickMonitorCPPWrapper.mm */,
@@ -746,7 +740,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C959ABE32A15CAD80003B113 /* ClickMonitorCPP.hpp in Headers */,
-				C959ABE42A15CADF0003B113 /* ClickMonitorHelper.h in Headers */,
 				7CA35F73C28025B34904FFEDD4F5E018 /* UserClickMonitor-umbrella.h in Headers */,
 				C93B44122A15FB0900B481E0 /* ClickMonitorCPPWrapper.h in Headers */,
 			);
@@ -963,7 +956,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C19122D479984A5E03C3D67959113909 /* UserClickMonitor-dummy.m in Sources */,
-				C959ABE12A15CACF0003B113 /* ClickMonitorHelper.m in Sources */,
 				C93B44102A15FAE300B481E0 /* ClickMonitorCPPWrapper.mm in Sources */,
 				C959ABE22A15CAD30003B113 /* ClickMonitorCPP.cpp in Sources */,
 			);
