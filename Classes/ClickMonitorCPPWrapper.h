@@ -7,8 +7,7 @@
 
 #import <Foundation/Foundation.h>
 @interface ClickMonitorCPPWrapper : NSObject
-- (void)hello_cpp_wrapped:(NSString *)name;
 - (BOOL)addEventToSystem:(NSString *)key :(NSString *)value;
-- (float)getAggregatedAnswer:(int)timeStamp;
+- (float)getAggregatedAnswer:(NSString *)key;
 @end
 

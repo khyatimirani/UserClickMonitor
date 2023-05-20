@@ -13,7 +13,6 @@
 NSDictionary<NSString *, NSString *> *clickTimeStamps = nil;
 - (BOOL)addEventToSystem:(NSDictionary<NSString *, NSString *> *)event {
     ClickMonitorCPPWrapper *wrapperObj;
-    [wrapperObj hello_cpp_wrapped:(@"Hi calling from Objective C")];
     [wrapperObj addEventToSystem:@"key1" :[event objectForKey:@"key1"]];
     return true;
 }

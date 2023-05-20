@@ -15,8 +15,11 @@
 
 @implementation NEViewController
 
+ClickMonitorCPPWrapper *wrapper;
+
 - (void)viewDidLoad
 {
+    wrapper = [[ClickMonitorCPPWrapper alloc] init];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -28,13 +31,18 @@
 }
 
 - (IBAction)burgerClickAction:(id)sender {
-    ClickMonitorCPPWrapper *wrapper = [[ClickMonitorCPPWrapper alloc] init];
-    [wrapper addEventToSystem:@"Key" : @"Click 1"];
+    NSDate * now = [NSDate date];
+    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
+    [outputFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+    NSString *newDateString = [outputFormatter stringFromDate:now];
+    NSLog(@"newDateString %@", newDateString);
+    [wrapper addEventToSystem:@"Key" : newDateString];
     printf("Burger clicked");
     
 }
 
 - (IBAction)tenSecondAction:(id)sender {
+    [wrapper getAggregatedAnswer:@"Key"];
     printf("Burger clicked");
 }
 

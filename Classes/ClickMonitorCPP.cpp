@@ -19,9 +19,7 @@ void ClickMonitorCPP::hello_cpp(const std::string& name) {
 }
 
 bool ClickMonitorCPP::addEventToSystem(const std::string& key,const std::string& value) {
-    
-    printf("calling from CPP");
-
+    dictionary.insert({key, value});
     return true;
 }
 
@@ -49,15 +47,30 @@ bool ClickMonitorCPP::checkIfGivenIntervalMatches(const std::string& timeString,
     }
 }
 
-float getAggregatedAnswer(int timeStamp, const std::vector<int>& clickTimeStamps) {
-    ClickMonitorCPP cpp;
+std::array<float, 3> ClickMonitorCPP::getAggregatedAnswer(const std::string &key) {
+    std::array<float, 3> a {0,0,0};
     int counter = 0;
-    for (int object : clickTimeStamps) {
-        if (cpp.checkIfGivenIntervalMatches("key1", object)) {
-            counter++;
+    for (auto element : dictionary) {
+        if (element.first == key && checkIfGivenIntervalMatches(element.second, 10)) {
+            counter = counter + 1;
         }
-    }
-    float a = static_cast<float>(counter);
+       }
+    a[0] = counter;
+    counter = 0;
+    for (auto element : dictionary) {
+        if (element.first == key && checkIfGivenIntervalMatches(element.second, 20)) {
+            counter = counter + 1;
+        }
+       }
+    a[1] = counter;
+    counter = 0;
+    for (auto element : dictionary) {
+        if (element.first == key && checkIfGivenIntervalMatches(element.second, 150)) {
+            counter = counter + 1;
+        }
+       }
+    a[2] = counter;
+    counter = 0;
     return a;
 }
 
