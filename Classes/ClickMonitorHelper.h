@@ -8,7 +8,7 @@
 #ifndef ClickMonitorHelper_h
 #define ClickMonitorHelper_h
 
-#include <ClickMonitor.h>
+#include <ClickMonitorHelper.h>
 
 @interface ClickMonitorHelper: NSObject
 
@@ -20,7 +20,6 @@
 
 - (float)getAggregatedAnswer:(int)timeStamp;
 
-- (NSSimpleCString)checkIfCPPAccessible;
 
 @end
 #endif /* ClickMonitorHelper_h */

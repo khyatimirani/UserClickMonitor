@@ -7,15 +7,14 @@
 
 #import <Foundation/Foundation.h>
 #import "ClickMonitorHelper.h"
+#import "ClickMonitorCPPWrapper.h"
 
 @implementation ClickMonitorHelper : NSObject
-NSMutableArray *clickTimeStamps = nil;
--(BOOL)addEventToSystem:(NSString*)click :(NSString*)clickTimeStamp {
-    if (clickTimeStamps == nil)  {
-        clickTimeStamps = [[NSMutableArray alloc]  initWithObjects:clickTimeStamp,nil];
-    } else {
-        [clickTimeStamps addObject:clickTimeStamp];
-    }
+NSDictionary<NSString *, NSString *> *clickTimeStamps = nil;
+- (BOOL)addEventToSystem:(NSDictionary<NSString *, NSString *> *)event {
+    ClickMonitorCPPWrapper *wrapperObj;
+    [wrapperObj hello_cpp_wrapped:(@"Hi calling from Objective C")];
+    [wrapperObj addEventToSystem:@"key1" :[event objectForKey:@"key1"]];
     return true;
 }
 -(float)getAggregatedAnswer:(int)timeStamp {
@@ -40,10 +39,6 @@ NSMutableArray *clickTimeStamps = nil;
         return true;
     } else {
         return  false;
-    }
-    
-    -(NSSimpleCString)checkIfCPPAccessible {
-        return  test();
     }
 }
 
