@@ -13,13 +13,25 @@
 #include <chrono>
 #include <vector>
 #include <map>
+#include <time.h>
 using namespace std;
 void ClickMonitorCPP::hello_cpp(const std::string& name) {
     cout << "Hello " << name << " in C++" << endl;
 }
 
+const std::string currentDateTime() {
+    time_t     now = time(0);
+    struct tm  tstruct;
+    char       buf[80];
+    tstruct = *localtime(&now);
+    strftime(buf, sizeof(buf), "%Y-%m-%dT%H:%M:%S", &tstruct);
+
+    return buf;
+}
+
 bool ClickMonitorCPP::addEventToSystem(const std::string& key,const std::string& value) {
     dictionary.insert({key, value});
+    dictionaryTimeStamp.insert({key, currentDateTime()});
     return true;
 }
 
@@ -50,21 +62,21 @@ bool ClickMonitorCPP::checkIfGivenIntervalMatches(const std::string& timeString,
 std::array<float, 3> ClickMonitorCPP::getAggregatedAnswer(const std::string &key) {
     std::array<float, 3> a {0,0,0};
     int counter = 0;
-    for (auto element : dictionary) {
+    for (auto element : dictionaryTimeStamp) {
         if (element.first == key && checkIfGivenIntervalMatches(element.second, 10)) {
             counter = counter + 1;
         }
        }
     a[0] = counter;
     counter = 0;
-    for (auto element : dictionary) {
+    for (auto element : dictionaryTimeStamp) {
         if (element.first == key && checkIfGivenIntervalMatches(element.second, 20)) {
             counter = counter + 1;
         }
        }
     a[1] = counter;
     counter = 0;
-    for (auto element : dictionary) {
+    for (auto element : dictionaryTimeStamp) {
         if (element.first == key && checkIfGivenIntervalMatches(element.second, 150)) {
             counter = counter + 1;
         }

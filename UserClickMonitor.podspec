@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UserClickMonitor'
-  s.version          = '1.2.0'
+  s.version          = '1.3.0'
   s.summary          = 'A short description of UserClickMonitor.'
 
 # This description is used to generate tags and improve search results.

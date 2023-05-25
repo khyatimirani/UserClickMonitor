@@ -12,6 +12,7 @@
 class ClickMonitorCPP {
 public:
     std::multimap<std::string, std::string>  dictionary;
+    std::multimap<std::string, std::string>  dictionaryTimeStamp;
     void hello_cpp(const std::string& name);
     bool checkIfGivenIntervalMatches(const std::string& timeString, int forSeconds);
     bool addEventToSystem(const std::string& key,const std::string& value);

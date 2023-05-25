@@ -31,12 +31,7 @@ ClickMonitorCPPWrapper *wrapper;
 }
 
 - (IBAction)burgerClickAction:(id)sender {
-    NSDate * now = [NSDate date];
-    NSDateFormatter *outputFormatter = [[NSDateFormatter alloc] init];
-    [outputFormatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
-    NSString *newDateString = [outputFormatter stringFromDate:now];
-    NSLog(@"newDateString %@", newDateString);
-    [wrapper addEventToSystem:@"Key" : newDateString];
+    [wrapper addEventToSystem:@"Key" : @"1"];
     printf("Burger clicked");
     
 }

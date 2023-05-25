@@ -11,10 +11,10 @@ public class ClickMonitor: NSObject {
     let cppWrapper = ClickMonitorCPPWrapper()
     
    public func addEventToSystem(map: [String: String]) -> Bool {
-        let timeStamp = getCurrentTime()
-        return cppWrapper.addEvent(toSystem: map.first?.key ?? "key1", timeStamp)
+        return cppWrapper.addEvent(toSystem: map.first?.key ?? "key1", map.first?.value ?? "1")
     }
     
+    //  move this to c++ and store it in a different dictionary with key as the same from map param
     private func getCurrentTime() -> String {
         let mytime = Date()
         let format = DateFormatter()
