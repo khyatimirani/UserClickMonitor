@@ -15,9 +15,6 @@
 #include <map>
 #include <time.h>
 using namespace std;
-void ClickMonitorCPP::hello_cpp(const std::string& name) {
-    cout << "Hello " << name << " in C++" << endl;
-}
 
 const std::string currentDateTime() {
     time_t     now = time(0);

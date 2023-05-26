@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UserClickMonitor'
-  s.version          = '1.3.0'
+  s.version          = '1.4.0'
   s.summary          = 'A short description of UserClickMonitor.'
 
 # This description is used to generate tags and improve search results.
@@ -28,9 +28,4 @@ Pod::Spec.new do |s|
 
   s.source_files   = 'Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'UserClickMonitor' => ['UserClickMonitor/Assets/*.png']
-  # }
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
